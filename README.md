@@ -5,7 +5,7 @@
 | Nama | NRP |Github |
 |---------------------------|------------|--------|
 |Muhammad Zien Zidan | 5025211122 | https://github.com/zienzidan |
-|Glenaya | LupaNRPmu wkwk | https://github.com/nyawnayaw05 |
+|Glenaya | 5025211202 | https://github.com/nyawnayaw05 |
 
 
 ### Soal 1
@@ -84,6 +84,40 @@ Dalam soal ini, kita harus menemukan paket yang merupakan paket ``ke-130``. Sete
 
 ### Soal 5
 > Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+
+Pada soal ini kita tidak mendapatkan nc, sehingga kita harus mencari nc terlebih dahulu agar mendapatkan pertanyaan yang perlu dijawab. 
+- Pertama yang dilakukan adalah menggunakan ```smtp``` di Wireshark.
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/33ba2a54-8459-44df-b339-744c67e34bef)
+- Lalu klik kanan yang terdapat kata password.
+![No 5 Langkah 2](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/c7e46c20-7096-4b5b-bf33-c42e243658d1)
+- Kemudian keluar beberapa menu, kita pilih follow lalu TCP Stream.
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/4e1a9702-0731-40b1-b15a-81a9e7581cae)
+- Selanjutnya akan ditemukan kode yang akan di decode pada Base64. Kode yang kita masukan adalah NWltcGxlUGFzNXdvcmQ=
+![No 5 Kode untuk Base64](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/0c9349a5-e42f-42f0-b9f4-2d391385868c)
+- Lalu kita masuk ke Base64 dan memasukan kode yang sudah diberikan lalu pilih decode. Password yang ditemukan adalah 5implePas5word
+
+  ![No 5 Setelah Decode](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/9ca75ede-7902-49cc-b6fb-41e043c0436e)
+
+- Setelah mendapat password tersebut, masukan password ke dalam file zip yang sudah didownload. Sehingga kita mendapatkan akses untuk masuk file dan mendapatkan intstance nc untuk pertanyaan nomor 5 ini.
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/e7180198-6ba3-4626-8534-f424c3d03649)
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/f56c0ac5-5e58-431b-9d2e-6c8453f148dc)
+- Masukan instance nc pada Command Prompt akan keluar pertanyaan lalu bisa dijawab seperti di gambar berikut ini.
+![Screenshot 2023-09-18 214153](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/2700f5a6-a02e-45e5-a5a0-83b241e39110)
+### Penjelasan Jawaban
+a. Ada berapa banyak packet pada file pcap dapat kita lihat di bagian paling bawah dari gambar ini (tanda berwarna merah):
+![Penjelasan A dan B](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/48607828-9b29-4a94-935c-d3465edad3a6)
+**Terdapat 60 packet pada file pcap tersebut**
+
+b. Port yang digunakan untuk service SMTP adalah **25**. Kita dapat melihatnya pada gambar di poin a yang bertanda warna biru.
+
+c. Dari semua alamat IP yang tercapture IP yang public adalah **74.53.140.153** karena IP tersebut yang di luar range Private IP.
+![Screenshot 2023-09-22 125118](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/0d2977eb-6cae-4207-b736-5c0c6297bed1)
+
+
+
+
+
+
 
 
 ### Soal 6
