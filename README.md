@@ -41,6 +41,8 @@ Dalam pertanyaan terakhir ini, tugas kita adalah menemukan ``Acknowledgment numb
 
 ![first](image/hasilrunsoal1.jpeg)
 
+Kendala : Tidak memiliki kendala pada soal ini
+
 ### Soal 2
 > Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
@@ -53,6 +55,8 @@ Dalam Menjawab soal ini, kita perlu mengidentifikasi server yang digunakan dalam
 > Hasil Run
 
 ![first](image/hasilrunsoal2.png)
+
+Kendala : Tidak memiliki kendala pada soal ini
 
 ### Soal 3
 > Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
@@ -71,6 +75,8 @@ Dalam konteks pertanyaan ini, protokol yang tengah digunakan adalah ``UDP``, seb
 
 ![first](image/hasilrunsoal3.png)
 
+Kendala : Tidak memiliki kendala pada soal ini
+
 ### Soal 4
 > Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
@@ -81,6 +87,8 @@ Dalam soal ini, kita harus menemukan paket yang merupakan paket ``ke-130``. Sete
 > Hasil Run
 
 ![first](image/hasilrunsoal4.png)
+
+Kendala : Tidak memiliki kendala pada soal ini
 
 ### Soal 5
 > Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
@@ -113,12 +121,7 @@ b. Port yang digunakan untuk service SMTP adalah **25**. Kita dapat melihatnya p
 c. Dari semua alamat IP yang tercapture IP yang public adalah **74.53.140.153** karena IP tersebut yang di luar range Private IP.
 ![Screenshot 2023-09-22 125118](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/0d2977eb-6cae-4207-b736-5c0c6297bed1)
 
-
-
-
-
-
-
+Kendala : Awalnya bingung dikarenakan tidak ada inststance nc nya
 
 ### Soal 6
 > Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan **"server SOURCE ADDRESS 7812 is invalid"**. ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
@@ -145,16 +148,46 @@ Dari situ kita dapat membentuk suatu kata dari pola yang telah ditemukan yaitu `
 
 ![first](image/hasilrunsoal6.png)
 
+Kendala :
+- Waktu pengerjaan yang kurang
+- Belum menemukan hint dan pola yang ada di soal
+
 ### Soal 7
 > Berapa jumlah packet yang menuju IP 184.87.193.88?
 
+Kita menggunakan ```ip.dst``` untuk menuju ke IP yang ditentukan. Sehingga kita akan memasukan ```ip.dst == 184.87.193.88``` di filter Wireshark. Jika sudah maka tinggal dihitung jumlah packet yang tertera pada gambar di bawah ini. Jumlah packetnya adalah **6**
+![Screenshot 2023-09-18 211121](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/371833a0-763c-4a9a-8e67-0282b658b518)
+
+> Hasil Command Prompt :
+
+![Nomor 7](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/03799aaa-2cf2-4726-b106-0b4487b93f21)
+
+Kendala : Tidak memiliki kendala pada soal ini
 
 ### Soal 8
 > Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
+Untuk mengambil semua protokol paket yang menuju port 80, kita menggunakan ```tcp.dstport == 80 || udp.dstport == 80```. Kita menggunakan ```tcp.dstport == 80``` untuk mencari paket-paket yang menuju ke port 80 menggunakan protokol TCP. Sedangkan ```udp.dstport == 80``` berguna untuk mencari paket-paket yang menuju ke port 80 menggunakan protokol UDP.
+
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/c86d2b20-0827-4eb6-9e09-f2c07575ddd8)
+
+> Hasil Command Prompt :
+
+![No 8](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/3f405556-4e0f-426c-9fcf-9ca6c52a496c)
+
+Kendala : Tidak memiliki kendala pada soal ini
+
 ### Soal 9
 > Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+ 
+Kueri filter yang digunakan untuk mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34 adalah ```ip.src == 10.51.40.1 && ip.dst != 10.39.55.34```. Kita menggunakan ```ip.src == 10.51.40.1```sebagai IP Source atau asal dan ```ip.dst != 10.39.55.34``` sebagai IP Destination atau alamat tujuan. Kita menggunakan ```!=``` karena soal diminta untuk tidak menuju alamat 10.39.55.34
 
+![image](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/1d3d4828-8994-4e51-9c8a-b51d203d4899)
+
+Hasil Command Prompt :
+![no 9](https://github.com/nyawnayaw05/Jarkom-Modul-1-A11-2023/assets/114491445/753217e4-b40a-4520-b5a4-b0245bf8550a)
+
+Kendala : Tidak memiliki kendala pada soal ini
 
 ### Soal 10
 > Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
@@ -169,3 +202,5 @@ Selanjutnya, setelah kita mendapatkan ``Password`` tersebut, langkah selanjutnya
 > Hasil Run
 
 ![first](image/hasilrunsoal10.png)
+
+Kendala : Tidak memiliki kendala pada soal ini
