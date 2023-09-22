@@ -4,7 +4,7 @@
 ## Author
 | Nama | NRP |Github |
 |---------------------------|------------|--------|
-|Muhammad Zien Zidan | 5025211122 | hhttps://github.com/zienzidan |
+|Muhammad Zien Zidan | 5025211122 | https://github.com/zienzidan |
 |Glenaya | LupaNRPmu wkwk | https://github.com/nyawnayaw05 |
 
 
