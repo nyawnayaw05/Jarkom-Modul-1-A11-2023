@@ -1,7 +1,7 @@
 # Jarkom-Modul-1-A09-2023
 **Praktikum Jaringan Komputer Modul 1 Tahun 2023**
 
-## Author
+## Penulis
 | Nama | NRP |Github |
 |---------------------------|------------|--------|
 |Muhammad Zien Zidan | 5025211122 | https://github.com/zienzidan |
